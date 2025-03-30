@@ -1,0 +1,13 @@
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\results\GameResultsResource.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\util\Utils.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\card\JsCard.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\team\TeamService.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\team\TeamModel.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\util\Converters.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\AliasApplication.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\card\CardResource.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\team\TeamResource.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\results\GameResultsService.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\card\CardService.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\card\CardModel.kt
+C:\Users\218001452\Downloads\my2025Project-main\my2025Project-main\Homework-1\aliasServer\src\main\kotlin\jetbrains\kotlin\course\alias\util\Words.kt
