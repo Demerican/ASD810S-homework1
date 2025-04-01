@@ -2,14 +2,14 @@ package jetbrains.kotlin.course.alias.card
 
 import org.springframework.stereotype.Service
 import jetbrains.kotlin.course.alias.util.identifier
-import jetbrains.kotlin.course.alias.util.identifierFactory
+import jetbrains.kotlin.course.alias.util.IdentifierFactory
 import jetbrains.kotlin.course.alias.util.words
 
 @Service
 class CardService(private val words: List<String>) {
 
 
-    val identifierFactory: identifierFactory = identifierFactory()
+    val identifierFactory: IdentifierFactory = IdentifierFactory()
     val cards: List<Card> = generateCards()
 
     companion object{
@@ -25,7 +25,7 @@ class CardService(private val words: List<String>) {
         }
     }
 
-    private fun List<String>.toWords(): List<word> = this.map { word(it) }
+    private fun List<String>.toWords(): List<Word> = this.map { Word(it) }
 
     fun getCardByIndex(index: Int): Card {
         if (index < 0 || index >= cards.size) {

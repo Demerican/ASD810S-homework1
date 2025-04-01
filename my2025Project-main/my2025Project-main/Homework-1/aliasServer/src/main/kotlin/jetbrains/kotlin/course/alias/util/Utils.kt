@@ -1,17 +1,15 @@
 package jetbrains.kotlin.course.alias.util
 
-typealias identifier = String
+typealias identifier = Int
 
-class identifierFactory {
-    private  var count = 0
-
-
+class IdentifierFactory {
+    var count = 0
     fun generate(): identifier {
         count++
-        return "id_$count"
+        return count
     }
 }
 
 fun uniqueIdentifier(): identifier {
-    return identifierFactory().generate()
+    return IdentifierFactory().generate()
 }

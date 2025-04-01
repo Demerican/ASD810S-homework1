@@ -1,13 +1,18 @@
 package jetbrains.kotlin.course.alias.team
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import jetbrains.kotlin.course.alias.util.identifier
-import jetbrains.kotlin.course.alias.util.identifierFactory
+import jetbrains.kotlin.course.alias.util.IdentifierFactory
 import org.springframework.stereotype.Service
+import java.io.File
 
 @Service
 class TeamService {
 
-    val identifierFactory: identifierFactory = identifierFactory()
+    val identifierFactory: IdentifierFactory = IdentifierFactory()
+    private val objectMapper = jacksonObjectMapper()
+    private val teamsStorageFile = File("teamsStorage.json")
+    private val teamIdCounterFile = File("teamIdCounter.txt")
 
     companion object {
         val teamsStorage: MutableMap<identifier, Team> = mutableMapOf()
@@ -26,11 +31,21 @@ class TeamService {
             val endIndex = (i + 1) * memberPerTeam + minOf(i + 1, remainderMembers)
             val teamMembers = shuffledMemberNames.subList(startIndex, endIndex)
 
-            val newTeam = Team(teamId, teamName, teamMembers)
+            val newTeam = Team(teamId, 0,teamName, teamMembers)
             teamsStorage[teamId] = newTeam
             generatedTeams.add(newTeam)
         }
         return generatedTeams
     }
 
+    fun saveTeamsData() {
+        if (teamsStorageFile.exists()) {
+            val loadedStorage: MutableMap<identifier, Team> = objectMapper.readValue(teamsStorageFile, objectMapper.typeFactory.constructCollectionType(MutableMap::class.java, identifier::class.java, Team::class.java))
+            teamsStorage.putAll(loadedStorage)
+
+        }
+        if (teamIdCounterFile.exists()) {
+            identifierFactory.count = teamIdCounterFile.readText().toIntOrNull() ?: 0
+        }
+    }
 }
